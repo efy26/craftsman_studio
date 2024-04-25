@@ -1,0 +1,165 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Varela Round,Helvetica,arial,serif;
+    font-weight: 10;
+    letter-spacing: 5px;
+}
+body {
+    
+    background-color: #ffffff;
+    /* width: 100%; */
+}
+
+/* ========== menu list ==========*/
+.menu_list_elements {
+    display: flex;
+    justify-content: center;
+    height: 0;
+    overflow: hidden;
+    background-color: #000000;
+    background-color: #111111;
+    color: white;
+    transition: 0.5s ease-out;
+}
+.menu_list_elements .container_menu_list {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.nav_link{
+    color: white;
+    text-decoration: none;
+    margin-top: 20px;
+    transition: 0.3s;
+}
+.menu_list_elements .container_menu_list p{
+    margin-top: 20px;
+    font-size: 0.5em;
+    letter-spacing: 2px;
+    border-top: 1px solid orange;
+    padding: 20px 0;
+}
+.menu_list_elements .container_menu_list a:hover{
+    color: orange;
+}
+/* ========== and menu list ==========*/
+
+/* ========== nav bar ==========*/
+.container_nav_bar  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000;
+    color: white;
+    padding: 30px 20px;
+}
+.container_nav_bar img {
+    position: absolute;
+    left: 10px;
+    width: 10%;
+}
+.container_nav_bar p a {
+    display: flex;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+.container_nav_bar p:last-child a {
+    color: orange;
+}
+.select_menu {
+    display: none;
+}
+.container_nav_bar p a:hover {
+    display: flex;
+    color: orange;
+}
+/* ========== and nav bar ==========*/
+
+/* ========== main ==========*/
+.menu_active {
+    z-index: 1;
+}
+.main_carousel {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+/* .img_1 {
+    background: url('/img/ELS_4207.jpg');
+}
+.img_2 {
+    background: url('/img/ELS_4247.jpg');
+    
+}
+.img_3 {
+    background: url('/img/ELS_4208.jpg');
+    
+} */
+
+.carousel {
+    position: absolute;
+    width: 100%;
+    /* height: 100%; */
+    overflow: hidden;
+    /* object-fit: cover; */
+    /* object-position: center; */
+    /* clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%); */
+    /* height: 1000pt; */
+    /* position: absolute; */
+    /* overflow-x: hidden; */
+}
+/* ========== and main ==========*/
+
+/* ==========  bebe ==========*/
+.active {
+    color: orange;
+    transition: 0.5s;
+}
+.container_bebe {
+    display: grid;
+    row-gap: 10px;
+}
+.bloc_un {
+    display: grid;
+    row-gap: 10px;
+}
+.bloc_deux {
+    display: grid;
+    row-gap: 10px;
+}
+.container_bebe, .bloc_un a, .bloc_deux a {
+    text-decoration: none;
+    color: white;
+}
+.container_bebe, .bloc_un img, .bloc_deux img {
+    width: 100%;
+}
+.container_footer {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
+    row-gap: 25px;
+}
+.container_footer .bi-instagram, .container_footer p {
+    color: white;
+}
+.container_footer  p {
+    font-size: 0.7em;
+    letter-spacing: 2px;
+}
+.container_footer .bi-instagram {
+    font-size: 1.5em;
+}
+/* ==========  and bebe ==========*/
+
+/* ==========   media screen ==========*/
+@media (orientation: landscape)  {
+    .container_nav_bar {
+        background-color: red;
+    }
+}
+/* ==========  and media screen ==========*/

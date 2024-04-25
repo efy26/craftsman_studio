@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <di class="all" id="app">
+        <div class="menu_list_elements">
+            <div class="container_menu_list">
+                <a href="" @click="goToAccueil" class="nav_link" v-bind:class=" {active: showAccueil}">ACCUEIL</a>
+                <a href="#" @click="goToBebe" class="nav_link" v-bind:class=" {active: showBebe}">BÉBÉS</a>
+                <a href="#" @click="goToCouple" class="nav_link" v-bind:class=" {active: showCouple}">COUPLES</a>
+                <a href="#" @click="goToHomme" class="nav_link" v-bind:class=" {active: showHomme}">HOMMES</a>
+                <a href="#" @click="goToFemme" class="nav_link" v-bind:class=" {active: showFemme}">FEMMES</a>
+                <a href="#" @click="goToNoel" class="nav_link" v-bind:class=" {active: showNoel}">NOËL</a>
+                <a href="#" @click="goToMariage" class="nav_link" v-bind:class=" {active: showMariage}">MARIAGES</a>
+                <a href="#" @click="goToAnniversaire" class="nav_link" v-bind:class=" {active: showAnniversaire}">ANNIVERSAIRES</a>
+                <a href="#" @click="goToAbout" class="nav_link" v-bind:class=" {active: showAbout}">À PROPOS</a>
+                <a href="#" @click="goToRdv" class="nav_link" v-bind:class=" {active: showRdv}">PRENDRE RENDEZ-VOUS</a>
+                <p>E.L.S CRAFTSMAN STUDIO</p>
+            </div>
+        </div>
+        <header>
+            <div class="header">
+                <div class="container_nav_bar">
+                    <img src="img/logo.png" alt="Logo" srcset="">
+                    <p class="menu_no_select"><a href="#">MENU</a></p>
+                    <p class="select_menu"><a href="#">MENU</a></p>
+                </div>
+            </div>
+        </header>
+
+        <main v-if="showAccueil">
+            <div class="main">
+                <div class="container_carousel">
+                    <div class="main_carousel">
+                        
+                        <img class="carousel img_0" src="" alt="" srcset="">
+
+                            <img class="carousel img_1" src="img/ELS_4207.jpg" alt="" srcset="">
+
+
+                            <img class="carousel img_2" src="img/ELS_4247;.jpg" alt="" srcset="">
+
+
+                            <img class="carousel img_3" src="img/ELS_4208.jpg" alt="" srcset="">
+
+                            <img class="carousel img_4" src="" alt="" srcset="">
+
+
+
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <div class="bebe" v-if="showBebe">
+            <div class="container_bebe">
+                <div class="bloc_un">
+                    <a href="img/ELS_4207.jpg" class="img"><img src="img/ELS_4207.jpg" >
+                        <!-- <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident facere, sapiente laudantium aperiam a excepturi, officia aliquid nemo qui numquam facilis itaque perferendis, maxime alias velit cumque delectus nobis nulla.</p> -->
+                    </a>
+                    <a href="" class="img"><img src="img/ELS_4247;.jpg" >
+                        <!-- <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident facere, sapiente laudantium aperiam a excepturi, officia aliquid nemo qui numquam facilis itaque perferendis, maxime alias velit cumque delectus nobis nulla.</p> -->
+                    </a>
+                    <a href="" class="img"><img src="img/ELS_4208.jpg" >
+                        <!-- <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident facere, sapiente laudantium aperiam a excepturi, officia aliquid nemo qui numquam facilis itaque perferendis, maxime alias velit cumque delectus nobis nulla.</p> -->
+                    </a>
+                </div>
+                <div class="bloc_deux">
+                    <a href="" class="img">
+                        <img src="img/ELS_4247;.jpg" >
+                        <!-- <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident facere, sapiente laudantium aperiam a excepturi, officia aliquid nemo qui numquam facilis itaque perferendis, maxime alias velit cumque delectus nobis nulla.</p> -->
+                    </a>
+                    <a href="" class="img"><img src="img/ELS_4207.jpg" >
+                        <!-- <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident facere, sapiente laudantium aperiam a excepturi, officia aliquid nemo qui numquam facilis itaque perferendis, maxime alias velit cumque delectus nobis nulla.</p> -->
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <footer v-if="showAccueil || showBebe">
+            <div class="footer">
+                <div class="container_footer">
+                    <i class="bi bi-instagram"></i>
+                    <p>e.l.s craftsman studio, mise en ligne par efy</p>
+                </div>
+            </div>
+        </footer>
+    </di>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="js/vue.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
