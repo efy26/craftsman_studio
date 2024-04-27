@@ -49,7 +49,7 @@ window.onload = () => {
 
     // ========= evenements for slide ===========
 setInterval(imgSlide, 5200)
-document.querySelector(".bi-instagram").addEventListener("click", imgSlide)
+// document.querySelector(".bi-instagram").addEventListener("click", imgSlide)
 // ========= evenements for slide ===========
      
 }

@@ -153,6 +153,10 @@
 .container_footer .bi-instagram, .container_footer p {
     color: rgb(0, 0, 0);
 }
+.container_footer  a {
+    text-align: center;
+    width: 5%;
+}
 .container_footer  p {
     font-size: 0.7em;
     letter-spacing: 2px;
