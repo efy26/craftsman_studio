@@ -12,45 +12,21 @@ const nav_links_classic = document.querySelector("#nav_links_classic");
 
  // ========= and variables for menu ===========
 
-  // ========= variables for slide ===========
- let carousel = document.querySelectorAll(".carousel");
- let indice = 1;
-
- const slideAu = (valeur) => {
-    
-    
-    valeur.classList.add("menu_active")
-    // valeur.classList.remove("menu_disactive");
-   
-} 
-const slideDi = (valeur) => {
-    valeur.classList.remove("menu_active")
-    // valeur.classList.add("menu_disactive")
-    // valeur.classList.remove("menu_active")
-
-    
-    
-    // valeur.classList.remove("menu_active")
-} 
- // ========= and variables for slide ===========
 
 window.onload = () => {
-    // slideAu(carousel[indice])
-    // slideDi(carousel[indice])
     // ========= evenements for menu ===========
-    btn_menu.addEventListener("click", forOpenMenu)
-    menu_select.addEventListener("click", forCloseMenu)
-    link_rdv.addEventListener("click", forOpenMenuRdv)
-    nav_links.addEventListener("click", forCloseMenuRdv)
+        btn_menu.addEventListener("click", forOpenMenu)
+        menu_select.addEventListener("click", forCloseMenu)
+        link_rdv.addEventListener("click", forOpenMenuRdv)
+        nav_links.addEventListener("click", forCloseMenuRdv)
     // =======
-    link_rdv_classic.addEventListener("click", forOpenMenuRdv_classic)
-    nav_links_classic.addEventListener("click", forCloseMenuRdv_classic)
+        link_rdv_classic.addEventListener("click", forOpenMenuRdv_classic)
+        nav_links_classic.addEventListener("click", forCloseMenuRdv_classic)
      // ========= and evenements for menu ===========
 
     // ========= evenements for slide ===========
-setInterval(imgSlide, 5200)
-// document.querySelector(".bi-instagram").addEventListener("click", imgSlide)
-// ========= evenements for slide ===========
+        setInterval(imgSlide, 2500)
+    // ========= evenements for slide ===========
      
 }
 
@@ -94,28 +70,33 @@ const forCloseMenuRdv_classic = (e) => {
 }
 // ========= and functions for menu ===========
 
-// ========= functions for slide ===========
-const imgSlide = () => {
 
-    slideDi(carousel[indice])
-    slideAu(carousel[indice+1])
+  // ========= variables for slide ===========
+  let carousel = document.querySelectorAll(".carousel");
 
+  let indice = 0;
 
-    indice = indice+1
-    slideDi(carousel[4])
-    slideAu(carousel[4])
-        if (indice == 4 ) {
-            indice = 1;
-            
+  let nbr_img = carousel.length
+
+  const slideDi = () => {
+     for (let i = 0; i < nbr_img; i++) {
+       carousel[i].classList.remove("menu_active");
+       
+     }
     
-            slideDi(carousel[indice])
-            slideAu(carousel[indice])
-            // slideDi(carousel[indice])
-            
-            indice = indice
-        }
+ } 
+  // ========= and variables for slide ===========
 
 
+// ========= functions for slide ===========
+    const imgSlide =() => {
+    indice++
+    if (indice >= 3) {
+        indice = 0
+    }
+    slideDi()
+    
+    carousel[indice].classList.add("menu_active");
 }
 
 // ========= and functions for slide ===========

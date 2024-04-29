@@ -6,11 +6,16 @@
     font-weight: 10;
     letter-spacing: 2px;
     color: black;
+    z-index: unset;
 }
 
 /* ========== menu list ==========*/
 .menu_classic_elements, .contacts_menu_classic, .name {
     display: none;
+}
+.name_list span {
+    color: orange;
+    font-size: 2em;
 }
 .menu_list_elements {
     display: flex;
@@ -97,18 +102,25 @@
 /* ========== and nav bar ==========*/
 
 /* ========== main ==========*/
-.menu_active {
-    z-index: 1;
+
+.main_carousel {
+    position: relative;
+}
+.carousel.menu_active {
+    opacity: 1;
+    transition: 1s all;
 }
 .carousel {
-    position: absolute;
+    object-fit: cover;
+    object-position: center;
     left: 10%;
     right: 10%;
     width: 80%;
     border: none;
     border-radius: 25px;
     padding-bottom: 7px;
-
+    position: absolute;
+    opacity: 0;
 }
 /* ========== and main ==========*/
 
@@ -116,6 +128,24 @@
 .active {
     color: orange;
     transition: 0.5s;
+}
+.container_bebe {
+    display: grid;
+    row-gap: 20px;
+}
+.bebe div div div{
+    display: grid;
+    row-gap: 10px;
+}
+.bebe div h1{
+    font-size: 0.9em;
+    font-weight: bolder;
+}
+.bebe div p{
+    font-size: 0.8em;
+    color: rgb(143, 143, 143);
+    word-wrap: break-word;
+    padding-bottom: 10px;
 }
 .bloc_un {
     position: relative;
@@ -132,7 +162,6 @@
     display: grid;
     row-gap: 10px;
     width: 90%;
-
 }
 .container_bebe, .bloc_un a, .bloc_deux a {
     text-decoration: none;
@@ -146,7 +175,6 @@
     display: flex;
     flex-direction: column;
     text-align: center;
-    /* width: 90%; */
     padding: 10px;
     row-gap: 25px;
 }
@@ -175,8 +203,41 @@
     color: black;
     width: 90%;
 }
+.apropos img{
+    background-color: black;
+    border-radius: 10px;
+}
 .apropos img, .apropos p{
     width: 100%;
+}
+.dsc_apropos {
+    width: 100%;
+    font-family: sans-serif;
+}
+.dsc_apropos h1{
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.list_services {
+    padding-bottom: 20px;
+}
+.list_services ol{
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    column-gap: 50px;
+}
+.list_services ol div{
+    padding: 0 20px;
+}
+.list_services ol ul li{
+    word-wrap: break-word;
+    font-size: 0.7em;
+}
+li h2{
+    font-size: 1em;
+    font-weight: bolder;
+    padding: 10px 0;
 }
 .apropos p{
     margin-top: 5%;
@@ -190,7 +251,6 @@
 @media (orientation: landscape)  {
     .menu_classic_elements {
         display: none;
-
     }
     .menu_list_elements .container_menu_list {
         width: 40%;
@@ -207,29 +267,41 @@
         width: 5%;
     }
     .main_carousel {
-        /* position: unset; */
         display: flex;
         column-gap: 10px;
         justify-content: center;
-        left: 100%;
-        
         padding: 15px;
     }
-    .main_carousel img:first-child {
-        display: none;
-    }
-    .main_carousel img:last-child {
-        display: none;
+    .carousel.menu_active {
+        opacity: unset;
+        transition: unset;
     }
     .carousel {
         position: relative;
         left: 0%;
-        right: 0%;
         width: 30%;
         border: none;
         border-radius: 25px;
         padding-bottom: 7px;
-    
+        opacity: unset;
+    }
+    .container_bebe {
+        display: grid;
+        row-gap: 20px;
+    }
+    .bebe div div div{
+        display: grid;
+        row-gap: 10px;
+    }
+    .bebe div h1{
+        font-size: 0.9em;
+        font-weight: bolder;
+    }
+    .bebe div p{
+        font-size: 0.8em;
+        color: rgb(143, 143, 143);
+        word-wrap: break-word;
+        padding-bottom: 10px;
     }
     .bloc_un {
         display: grid;
@@ -247,7 +319,6 @@
         column-gap: 10px;
         row-gap: 0px;
         width: 90%;
-    
     }
     .container_bebe, .bloc_un a, .bloc_deux a {
         text-decoration: none;
@@ -269,10 +340,36 @@
     }
     .apropos img {
         width: 100%;
-        /* height: 500px; */
+    }
+    .dsc_apropos {
+        width: 100%;
+        font-family: sans-serif;
+    }
+    .dsc_apropos h1{
+        margin-top: 20px;
+        margin-bottom: 10px;
+
+    }
+    .list_services ol{
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: center;
+        column-gap: 50px;
+    }
+    .list_services ol div{
+        padding: 0 20px;
+    }
+    .list_services ol ul li{
+        word-wrap: break-word;
+        font-size: 0.7em;
+    }
+    li h2{
+        font-size: 1em;
+        font-weight: bolder;
+        padding: 10px 0;
     }
     .apropos p{
-        margin-top: 30%;
+        margin-top: 0%;
         text-align: left;
         font-family: serif;
         width: 80%;
@@ -304,8 +401,7 @@
         justify-content: space-evenly;
         column-gap: 3px;
         width: 100%;
-        font-size: 0.6em;
-        
+        font-size: 0.6em;   
     }
     #nav_links_classic {
         display: none;
@@ -348,19 +444,10 @@
         width: 3%;
     }
     .main_carousel {
-        /* position: unset; */
         display: flex;
         column-gap: 10px;
         justify-content: center;
-        left: 100%;
-        
         padding: 15px;
-    }
-    .main_carousel img:first-child {
-        display: none;
-    }
-    .main_carousel img:last-child {
-        display: none;
     }
     .carousel {
         position: relative;
@@ -370,7 +457,24 @@
         border: none;
         border-radius: 25px;
         padding-bottom: 7px;
-    
+    }
+    .container_bebe {
+        display: grid;
+        row-gap: 20px;
+    }
+    .bebe div div div{
+        display: grid;
+        row-gap: 10px;
+    }
+    .bebe div h1{
+        font-size: 0.8em;
+        font-weight: bolder;
+    }
+    .bebe div p{
+        font-size: 0.7em;
+        color: rgb(143, 143, 143);
+        word-wrap: break-word;
+        padding-bottom: 10px;
     }
     .bloc_un {
         left: 25.6%;
@@ -378,7 +482,6 @@
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         column-gap: 5px;
-        row-gap: 0px;
         width: 70%;
     }
     
@@ -402,25 +505,44 @@
     .apropos {
         display: grid;
         grid-template-columns: 0.8fr 2fr;
-        column-gap: 20px;
+        column-gap: 30px;
         color: black;
         width: 90%;
     }
     .apropos img {
+        width: 90%;
+    }
+    .dsc_apropos {
         width: 100%;
-        /* height: 500px; */
+        font-family: sans-serif;
+    }
+    .dsc_apropos h1{
+        margin-top: 20px;
+        margin-bottom: 10px;
+
+    }
+    .list_services ol{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        align-items: center;
+        column-gap: 50px;
+    }
+    .list_services ol div{
+        padding: 0 20px;
+    }
+    .list_services ol ul li{
+        word-wrap: break-word;
+        font-size: 0.7em;
+    }
+    li h2{
+        font-size: 1em;
+        font-weight: bolder;
+        padding: 10px 0;
     }
     .apropos p{
         margin-top: 0%;
         text-align: left;
-        font-family: serif;
-        width: 60%;
+        
     }
-    /* .img_bloc_deux_un {
-        grid-column:   2;
-    }
-    .img_bloc_deux_deux {
-        grid-column:  3;
-    } */
 }
 /* ==========  and media screen ==========*/
