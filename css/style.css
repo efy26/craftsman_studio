@@ -10,12 +10,11 @@
 }
 
 /* ========== menu list ==========*/
-.menu_classic_elements, .contacts_menu_classic, .name {
-    display: none;
-}
+.menu_classic_elements, .contacts_menu_classic, .name {display: none;}
+.name_list {font-size: 1.3em;}
 .name_list span {
     color: orange;
-    font-size: 2em;
+    font-size: 1.5em;
 }
 .menu_list_elements {
     display: flex;
@@ -39,9 +38,7 @@
     overflow: hidden;
     transition: 0.5s;
 }
-#nav_links {
-    display: none;
-}
+#nav_links {display: none;}
 .nav_link, .contacts a{
     color: white;
     text-decoration: none;
@@ -57,9 +54,7 @@
     padding: 20px 0;
     color: white;
 }
-.menu_list_elements .container_menu_list a:hover, .contacts a:hover{
-    color: orange;
-}
+.menu_list_elements .container_menu_list a:hover, .contacts a:hover {color:orange;}
 /* ========== and menu list ==========*/
 
 /* ========== nav bar ==========*/
@@ -80,21 +75,15 @@
     padding: 5px;
     border-radius: 7px;
 }
-.container_nav_bar p {
-   font-size: 0.8em;
-}
+.container_nav_bar p {font-size: 0.8em;}
 .container_nav_bar p a {
     display: flex;
     color: rgb(0, 0, 0);
     text-decoration: none;
     transition: 0.3s;
 }
-.container_nav_bar p:last-child a {
-    color: orange;
-}
-.select_menu {
-    display: none;
-}
+.container_nav_bar p:last-child a {color: orange;}
+.select_menu {display: none;}
 .container_nav_bar p a:hover {
     display: flex;
     color: orange;
@@ -103,9 +92,7 @@
 
 /* ========== main ==========*/
 
-.main_carousel {
-    position: relative;
-}
+.main_carousel {position: relative;}
 .carousel.menu_active {
     opacity: 1;
     transition: 1s all;
@@ -132,6 +119,7 @@
 .container_bebe {
     display: grid;
     row-gap: 20px;
+    pointer-events: none;
 }
 .bebe div div div{
     display: grid;
@@ -178,20 +166,21 @@
     padding: 10px;
     row-gap: 25px;
 }
-.container_footer .bi-instagram, .container_footer p {
-    color: rgb(0, 0, 0);
-}
+.container_footer .bi-instagram, .container_footer p {color: rgb(0, 0, 0);}
 .container_footer  a {
     text-align: center;
     width: 5%;
 }
 .container_footer  p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 7px;
     font-size: 0.7em;
     letter-spacing: 2px;
 }
-.container_footer .bi-instagram {
-    font-size: 1.5em;
-}
+.container_footer  p img{width: 2%;}
+.container_footer .bi-instagram {font-size: 1.5em;}
 /* ==========  and bebe ==========*/
 
 /* ==========  a propos ==========*/
@@ -207,9 +196,7 @@
     background-color: black;
     border-radius: 10px;
 }
-.apropos img, .apropos p{
-    width: 100%;
-}
+.apropos img, .apropos p{width: 100%;}
 .dsc_apropos {
     width: 100%;
     font-family: sans-serif;
@@ -218,18 +205,14 @@
     margin-top: 20px;
     margin-bottom: 10px;
 }
-.list_services {
-    padding-bottom: 20px;
-}
+.list_services {padding-bottom: 20px;}
 .list_services ol{
     display: grid;
     grid-template-columns: 1fr;
     align-items: center;
     column-gap: 50px;
 }
-.list_services ol div{
-    padding: 0 20px;
-}
+.list_services ol div{padding: 0 20px;}
 .list_services ol ul li{
     word-wrap: break-word;
     font-size: 0.7em;
@@ -249,12 +232,8 @@ li h2{
 
 /* ==========   media screen ==========*/
 @media (orientation: landscape)  {
-    .menu_classic_elements {
-        display: none;
-    }
-    .menu_list_elements .container_menu_list {
-        width: 40%;
-    }
+    .menu_classic_elements {display: none;}
+    .menu_list_elements .container_menu_list {width: 40%;}
     .container_nav_bar {
         display: flex;
         justify-content: center;
@@ -263,9 +242,7 @@ li h2{
         padding: 20px 20px;
         margin-top: 2%;
     }
-    .container_nav_bar img {
-        width: 5%;
-    }
+    .container_nav_bar img {width: 5%;}
     .main_carousel {
         display: flex;
         column-gap: 10px;
@@ -289,6 +266,7 @@ li h2{
         display: grid;
         row-gap: 20px;
     }
+    .container_footer  p img{width: 1.4%;}
     .bebe div div div{
         display: grid;
         row-gap: 10px;
@@ -310,9 +288,7 @@ li h2{
         row-gap: 0px;
         width: 90%;
     }
-    .img_bloc_un_trois  {
-        grid-column: 1/ span 2;
-    }
+    .img_bloc_un_trois  {grid-column: 1/ span 2;}
     .bloc_deux {
         display: grid;
         grid-template-columns: 1fr;
@@ -324,9 +300,7 @@ li h2{
         text-decoration: none;
         color: white;
     }
-    .container_bebe, .bloc_un img, .bloc_deux img {
-        border-radius: 7px;
-    }
+    .container_bebe, .bloc_un img, .bloc_deux img {border-radius: 7px;}
     .container_apropos {
         display: flex;
         justify-content: center;
@@ -338,9 +312,7 @@ li h2{
         color: black;
         width: 90%;
     }
-    .apropos img {
-        width: 100%;
-    }
+    .apropos img {width: 100%;}
     .dsc_apropos {
         width: 100%;
         font-family: sans-serif;
@@ -352,13 +324,11 @@ li h2{
     }
     .list_services ol{
         display: grid;
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
         align-items: center;
         column-gap: 50px;
     }
-    .list_services ol div{
-        padding: 0 20px;
-    }
+    .list_services ol div{padding: 0 20px;}
     .list_services ol ul li{
         word-wrap: break-word;
         font-size: 0.7em;
@@ -381,12 +351,11 @@ li h2{
         height: 0;
         overflow: hidden;
     }
-    .name {
-        display: unset;
-    }
+    .name {display: unset;}
+    .container_nav_bar p {font-size: 1.3em;}
     p span {
         color: orange;
-        font-size: 2em;
+        font-size: 1.5em;
     }
     .menu_classic_elements {
         padding: 10px;
@@ -403,9 +372,7 @@ li h2{
         width: 100%;
         font-size: 0.6em;   
     }
-    #nav_links_classic {
-        display: none;
-    } 
+    #nav_links_classic {display: none;} 
     .container_menu_classic {
         text-align: justify;
         color: black;
@@ -415,9 +382,7 @@ li h2{
         text-decoration: none;
     }
     
-    .container_menu_classic a:hover, .contacts_menu_classic a:hover{
-        color: orange;
-    }
+    .container_menu_classic a:hover, .contacts_menu_classic a:hover{color: orange;}
     .contacts_menu_classic {
         position: absolute;
         right: 0%;
@@ -437,12 +402,8 @@ li h2{
         transition: 0.3s;
         font-size: 0.7em;
     }
-    .menu_list_elements .container_menu_list {
-        width: 20%;
-    }
-    .container_nav_bar img {
-        width: 3%;
-    }
+    .menu_list_elements .container_menu_list {width: 20%;}
+    .container_nav_bar img {width: 3%;}
     .main_carousel {
         display: flex;
         column-gap: 10px;
@@ -462,6 +423,7 @@ li h2{
         display: grid;
         row-gap: 20px;
     }
+    .container_footer  p img{width: 0.8%;}
     .bebe div div div{
         display: grid;
         row-gap: 10px;
@@ -477,26 +439,23 @@ li h2{
         padding-bottom: 10px;
     }
     .bloc_un {
-        left: 25.6%;
-        right: 25.6%;
+        left: 24%;
+        right: 24%;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         column-gap: 5px;
         width: 70%;
     }
     
-    .img_bloc_un_trois  {
-        grid-column: unset;
-    }
+    .img_bloc_un_trois  {grid-column: unset;}
     .bloc_deux {
-        left: 25.6%;
-        right: 25.6%;
+        left: 24%;
+        right: 24%;
         display: grid;
         grid-template-columns: 0.4fr 0.4fr;
         column-gap: 5px;
         row-gap: 0px;
-        width: 65.5%;
-    
+        width: 65.4%;
     }
     .apropos_header {
         margin-top: 5%;
@@ -509,9 +468,7 @@ li h2{
         color: black;
         width: 90%;
     }
-    .apropos img {
-        width: 90%;
-    }
+    .apropos img {width: 90%;}
     .dsc_apropos {
         width: 100%;
         font-family: sans-serif;
@@ -527,9 +484,7 @@ li h2{
         align-items: center;
         column-gap: 50px;
     }
-    .list_services ol div{
-        padding: 0 20px;
-    }
+    .list_services ol div{padding: 0 20px;}
     .list_services ol ul li{
         word-wrap: break-word;
         font-size: 0.7em;

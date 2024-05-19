@@ -14,6 +14,7 @@ const nav_links_classic = document.querySelector("#nav_links_classic");
 
 
 window.onload = () => {
+    
     // ========= evenements for menu ===========
         btn_menu.addEventListener("click", forOpenMenu)
         menu_select.addEventListener("click", forCloseMenu)

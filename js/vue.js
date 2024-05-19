@@ -11,7 +11,8 @@ const APP = {
             showMariage: false,
             showAnniversaire: false,
             showAbout: false,
-            showRdv: false
+            showRdv: false,
+            year: new Date().getFullYear()
         }
     },
 
@@ -30,6 +31,7 @@ const APP = {
 
         goToCouple() {
             this.changeState("couple")
+            
         },
         goToHomme() {
             this.changeState("homme")
